@@ -1,21 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Calculadora</title>
+    <title>Lojinha Camargo</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Minha Calculadora</h1>
-    Primeiro Número <br />
-    <input type="number" id="n1"><br>
-    Segundo Número<br />
-    <input type="number" id="n2"><br /><br />
-    <button onclick="somar()">Somar</button>
 
-    <br/>
-    O Resultado é <span id="resultado"></span>
+<div class="container">
+    <div class="header">
+        Lojinha Camargo
+    </div>
 
-    <script src="js/calculo.js">     </script>
+<div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-img">Imagem</th>
+                    <th class="col-prod">Produto</th>
+                    <th class="col-preco">Preço Unitário</th>
+                    <th class="col-qtd">Qtd</th>
+                    <th class="col-total">Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-table-body"></tbody>
+        </table>
+    </div>
+
+    <div class="subtotal-bar" id="subtotal-display">
+        🛒 SUBTOTAL: 0
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

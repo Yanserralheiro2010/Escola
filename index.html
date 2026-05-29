@@ -1,38 +1,430 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojinha Camargo</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <meta
+    name="description"
+    content="Serviços de gráfica com atendimento rápido pelo WhatsApp."
+  />
+
+  <title>Cindy Gráfica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-<div class="container">
-    <div class="header">
-        Lojinha Camargo
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="container header__inner">
+
+      <!-- LOGO -->
+      <div class="brand">
+
+        <div class="brand__logo">
+
+          <svg
+            class="brand__svg"
+            viewBox="0 0 120 120"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <defs>
+
+              <linearGradient
+                id="logoGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+
+                <stop offset="0%" stop-color="#8b5cf6" />
+                <stop offset="50%" stop-color="#2563eb" />
+                <stop offset="100%" stop-color="#ec4899" />
+
+              </linearGradient>
+
+            </defs>
+
+            <rect
+              x="10"
+              y="10"
+              width="100"
+              height="100"
+              rx="28"
+              fill="url(#logoGradient)"
+            />
+
+            <path
+              d="
+                M78 36
+                C70 28, 58 25, 46 28
+                C30 33, 22 48, 24 63
+                C26 81, 40 94, 59 93
+                C68 92, 76 88, 82 81
+              "
+              fill="none"
+              stroke="white"
+              stroke-width="10"
+              stroke-linecap="round"
+            />
+
+            <circle
+              cx="82"
+              cy="40"
+              r="6"
+              fill="white"
+            />
+
+          </svg>
+
+        </div>
+
+        <div class="brand__texts">
+
+          <span class="brand__name">
+            Cindy Gráfica
+          </span>
+
+          <span class="brand__tag">
+            Impressão • Comunicação Visual
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- MENU -->
+      <nav class="nav">
+
+        <a class="nav__link" href="#inicio">
+          Início
+        </a>
+
+        <a class="nav__link" href="#galeria">
+          Galeria
+        </a>
+
+        <a class="nav__link" href="#contato">
+          Contato
+        </a>
+
+      </nav>
+
     </div>
 
-<div class="table-wrap">
-        <table>
-            <thead>
-                <tr>
-                    <th class="col-img">Imagem</th>
-                    <th class="col-prod">Produto</th>
-                    <th class="col-preco">Preço Unitário</th>
-                    <th class="col-qtd">Qtd</th>
-                    <th class="col-total">Total</th>
-                </tr>
-            </thead>
-            <tbody id="cart-table-body"></tbody>
-        </table>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+
+    <div class="container hero__grid">
+
+      <div>
+
+        <div class="pill">
+          Produção rápida • Alta qualidade
+        </div>
+
+        <h1 class="hero__title">
+          Seu projeto impresso do jeito que você imaginou.
+        </h1>
+
+        <p class="hero__text">
+          Cartões, banners, camisetas, folders,
+          embalagens e comunicação visual com acabamento premium.
+        </p>
+
+        <div class="hero__actions">
+
+          <a
+            class="btn btn--primary"
+            href="https://wa.me/5511946888005"
+            target="_blank"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            class="btn btn--ghost"
+            href="#contato"
+          >
+            Solicitar orçamento
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="hero__card">
+
+        <h2 class="hero__card-title">
+          Atendimento rápido
+        </h2>
+
+        <p class="hero__card-text">
+          Receba orçamento rápido pelo WhatsApp.
+        </p>
+
+        <a
+          class="btn btn--primary btn--full"
+          href="https://wa.me/5511946888005"
+          target="_blank"
+        >
+          Pedir orçamento
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="subtotal-bar" id="subtotal-display">
-        🛒 SUBTOTAL: 0
-    </div>
-</div>
+  </section>
 
-<script src="script.js"></script>
+  <!-- GALERIA -->
+  <section class="section" id="galeria">
+
+    <div class="container">
+
+      <div class="section__head">
+
+        <h2 class="section__title">
+          Galeria
+        </h2>
+
+        <p class="section__subtitle">
+          Alguns trabalhos realizados.
+        </p>
+
+      </div>
+
+      <div class="gallery">
+
+        <!-- ITEM -->
+        <figure class="gallery__item">
+
+          <img
+            class="gallery__img"
+            src="https://cabecacriativabrindes.com.br/wp-content/uploads/2024/10/camiseta-personalizada-com-estampa-100-algodao-dryfit-azul-cabeca-criativa-brindes-1000x1000.jpg"
+            alt="Camisetas"
+          />
+
+          <figcaption class="gallery__cap">
+            Camisetas
+          </figcaption>
+
+        </figure>
+
+        <!-- ITEM -->
+        <figure class="gallery__item">
+
+          <img
+            class="gallery__img"
+            src="https://m.media-amazon.com/images/I/51Q8WQBRnsL._AC_UF894,1000_QL80_.jpg"
+            alt="Cartões"
+          />
+
+          <figcaption class="gallery__cap">
+            Cartões
+          </figcaption>
+
+        </figure>
+
+        <!-- ITEM -->
+        <figure class="gallery__item">
+
+          <img
+            class="gallery__img"
+            src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1200&q=80"
+            alt="Flyers"
+          />
+
+          <figcaption class="gallery__cap">
+            Flyers
+          </figcaption>
+
+        </figure>
+
+        <!-- ITEM -->
+        <figure class="gallery__item">
+
+          <img
+            class="gallery__img"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+            alt="Embalagens"
+          />
+
+          <figcaption class="gallery__cap">
+            Embalagens
+          </figcaption>
+
+        </figure>
+
+        <!-- ITEM -->
+        <figure class="gallery__item">
+
+          <img
+            class="gallery__img"
+            src="https://www.graficadigitalfortaleza.com.br/uploads/produtos/folder-21x30cm-papel-couche-115g-corte-reto-4x4-174740048920511344968273729b316d.png"
+            alt="Folders"
+          />
+
+          <figcaption class="gallery__cap">
+            Folders
+          </figcaption>
+
+        </figure>
+
+        <!-- ITEM -->
+        <figure class="gallery__item">
+
+          <img
+            class="gallery__img"
+            src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
+            alt="Sinalização"
+          />
+
+          <figcaption class="gallery__cap">
+            Sinalização
+          </figcaption>
+
+        </figure>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section" id="contato">
+
+    <div class="container">
+
+      <div class="section__head">
+
+        <h2 class="section__title">
+          Contato
+        </h2>
+
+        <p class="section__subtitle">
+          Fale conosco pelo WhatsApp ou envie seu briefing por e-mail.
+        </p>
+
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- WHATSAPP -->
+        <div class="contact-card">
+
+          <div class="contact-icon whatsapp-icon">
+            💬
+          </div>
+
+          <h3 class="contact-card__title">
+            WhatsApp
+          </h3>
+
+          <p class="contact-card__text">
+            Atendimento rápido para orçamento,
+            prazos e dúvidas.
+          </p>
+
+          <a
+            class="btn btn--primary btn--full"
+            href="https://wa.me/5511946888005"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chamar no WhatsApp
+          </a>
+
+          <div class="contact-info">
+            (11) 94688-8005
+          </div>
+
+        </div>
+
+        <!-- EMAIL -->
+        <div class="contact-card">
+
+          <div class="contact-icon email-icon">
+            ✉️
+          </div>
+
+          <h3 class="contact-card__title">
+            E-mail
+          </h3>
+
+          <p class="contact-card__text">
+            Envie arquivos, referências e detalhes do projeto.
+          </p>
+
+          <a
+            class="btn btn--ghost btn--full"
+            href="mailto:yandavidnogueiraserralheiro@gmail.com"
+          >
+            Enviar e-mail
+          </a>
+
+          <div class="contact-info">
+            yandavidnogueiraserralheiro@gmail.com
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="container footer__inner">
+
+      <div>
+
+        <div class="footer__brand">
+          Cindy Gráfica
+        </div>
+
+        <div class="footer__copy">
+          © 2026 Todos os direitos reservados.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="js/grafica.js"></script>
+
 </body>
 </html>
+

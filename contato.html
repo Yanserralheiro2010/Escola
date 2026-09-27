@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enviar E-mail</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+
+            background: linear-gradient(
+                135deg,
+                #0f172a,
+                #1e3a8a
+            );
+        }
+
+        .container {
+            width: 100%;
+            max-width: 950px;
+
+            background-color: white;
+            border-radius: 18px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #172554;
+            margin-bottom: 10px;
+        }
+
+        .descricao {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 35px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .coluna {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        label {
+            color: #1e293b;
+            font-weight: bold;
+            margin-bottom: -10px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+
+            border: 2px solid #dbeafe;
+            border-radius: 10px;
+
+            padding: 14px;
+
+            font-size: 16px;
+
+            outline: none;
+
+            transition: 0.2s;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #2563eb;
+        }
+
+        textarea {
+            height: 225px;
+            resize: vertical;
+        }
+
+        .botao {
+            grid-column: 1 / 3;
+
+            border: none;
+            border-radius: 10px;
+
+            padding: 16px;
+
+            background-color: #2563eb;
+            color: white;
+
+            font-size: 17px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .botao:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+                padding: 25px;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            .botao {
+                grid-column: 1;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Entre em Contato</h1>
+
+        <p class="descricao">
+            Preencha seus dados e envie sua mensagem.
+        </p>
+
+        <form
+            action="https://formsubmit.co/yandavidnogueiraserralheiro@gmail.com"
+            method="POST"
+        >
+
+            <!-- Configurações do FormSubmit -->
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="Nova mensagem recebida pelo site!"
+            >
+
+<input
+                type="hidden"
+                name="_captcha"
+                value="false"
+            >
+
+            <!-- Coluna esquerda -->
+
+            <section class="coluna">
+
+                <label for="nome">
+                    Seu nome
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="Nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+
+                <label for="email">
+                    Seu e-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="E-mail"
+                    placeholder="exemplo@email.com"
+                    required
+                >
+
+
+                <label for="telefone">
+                    Seu telefone
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="Telefone"
+                    placeholder="(11) 99999-9999"
+                    required
+                >
+
+            </section>
+
+
+            <!-- Coluna direita -->
+
+            <section class="coluna">
+
+                <label for="mensagem">
+                    Sua mensagem
+                </label>
+
+                <textarea
+                    id="mensagem"
+                    name="Mensagem"
+                    placeholder="Digite sua mensagem aqui..."
+                    required
+                ></textarea>
+
+            </section>
+
+
+            <!-- Botão -->
+
+            <button
+                class="botao"
+                type="submit"
+            >
+                Enviar mensagem
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
